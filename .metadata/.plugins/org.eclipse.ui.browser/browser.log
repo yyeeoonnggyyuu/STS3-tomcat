@@ -1,0 +1,16 @@
+
+10월 21, 2024 11:32:23.928 NEW SESSION
+10월 21, 2024 11:32:23.928 [10160:6452:1021/113223.913:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 21, 2024 11:32:26.854 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 21, 2024 11:32:26.998 [10160:12280:1021/113226.997:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:22:21.784 [13340:1936:1021/122221.784:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 21, 2024 12:22:24.105 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 21, 2024 12:22:24.253 [13340:6984:1021/122224.252:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:22:30.801 [12488:12680:1021/122230.801:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 21, 2024 12:22:33.117 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 21, 2024 12:22:33.231 [12488:11984:1021/122233.230:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:23:05.31 [12488:11984:1021/122305.030:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:24:03.309 [12488:11984:1021/122403.308:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:25:38.766 [12488:11984:1021/122538.765:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:28:22.844 [12488:11984:1021/122822.843:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 21, 2024 12:33:54.913 [12488:11984:1021/123354.912:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT

@@ -1,0 +1,44 @@
+ch07_pjt_01
+
+워크스페이스
+
+https-content.xml
+
+
+
+Loading Spring static imports into Eclipse code assist favourites has encountered a problem 
+
+An internal error occurred during: "Loading Spring static imports into Eclipse code assist favourites".
+org/eclipse/jdt/internal/compiler/parser/Scanner$AjcClosure1
+
+
+환경변수 jdk-11 확인하기 (시스템속성-환경변수- 시스템변수 jdk 11 확인)
+
+급해서 일단 17을 11로 바꿨음 근데 집에서 다시 한번 보고 더 안전한 방법 찾을것
+
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+		<param-name>forceEncoding</param-name>
+		<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+오후 수업 시작 설명
+servlet-context.xml 에 있음
+<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>

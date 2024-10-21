@@ -1,0 +1,29 @@
+package com.company.hello.member;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MemberController {
+
+//	@RequestMapping("/signUp")
+//	public String signUp() {
+//		return "sign_up";
+//	}
+	
+	@RequestMapping("/signUpConfirm")
+	public String signUpConfirm(@RequestParam String m_id,
+			@RequestParam String m_pw,
+			@RequestParam String m_mail,
+			@RequestParam String m_phone) {
+		System.out.println("[MemberController] signUpConfirm()");
+		
+		return null;
+	}
+
+	@RequestMapping("/signIn")
+	public String signIn() {
+		return "sign_in";
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.company.hello.member;
+
+public class MemberService {
+	public int signUpConfirm(MemberVo memberVo) {
+		System.out.println("[MemberController] signUpConfirm()");
+		
+		return 0;
+	}
+}

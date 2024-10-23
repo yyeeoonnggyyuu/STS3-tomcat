@@ -1,4 +1,5 @@
 #Tomcat publish data
-#Mon Oct 21 17:11:34 KST 2024
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA\\.m2\\repository\\org\\springframework\\spring-web\\5.2.9.RELEASE\\spring-web-5.2.9.RELEASE.jar=C\:\\springMVC_STS\\download\\apache-tomcat-9.0.96\\apache-tomcat-9.0.96\\wtpwebapps\\ch08_pjt_01\\WEB-INF\\lib\\spring-web-5.2.9.RELEASE.jar
+#Wed Oct 23 10:13:58 KST 2024
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA\\.m2\\repository\\org\\springframework\\spring-web\\5.2.9.RELEASE\\spring-web-5.2.9.RELEASE.jar=C\:\\springMVC_STS\\download\\apache-tomcat-9.0.96\\apache-tomcat-9.0.96\\wtpwebapps\\BookRentalPjt\\WEB-INF\\lib\\spring-web-5.2.9.RELEASE.jar
+org.eclipse.jst.jee.server\:BookRentalPjt=C\:\\springMVC_STS\\download\\apache-tomcat-9.0.96\\apache-tomcat-9.0.96\\wtpwebapps\\BookRentalPjt
 org.eclipse.jst.jee.server\:ch08_pjt_01=C\:\\springMVC_STS\\download\\apache-tomcat-9.0.96\\apache-tomcat-9.0.96\\wtpwebapps\\ch08_pjt_01

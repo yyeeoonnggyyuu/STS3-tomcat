@@ -3,11 +3,10 @@ package com.company.hello;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.company.hello.member.MemberService;
 import com.company.hello.member.MemberVo;
-import com.company.hello.member.MemberDao;
+
 
 
 
@@ -17,7 +16,7 @@ public class MemberController {
 //	MemberService memberService = new MemberService();
 	
 	@Autowired
-	private MemberService memberService;
+	MemberService memberService;
 
 	@RequestMapping("/signUp")
 	public String signUp() {
@@ -36,13 +35,27 @@ public class MemberController {
 		
 		memberService.signUpConfirm(memberVo);
 		
-		return null;
-
+		return "sign_up_ok";
+		
 	}
-
+	
 	@RequestMapping("/signIn")
 	public String signIn() {
 		return "sign_in";
+	}
+	
+
+	@RequestMapping("/signInConfirm")
+	public String signInConfirm(MemberVo memberVo) {
+		System.out.println("[MemberController] signInConfirm()");
+		
+		MemberVo signInedMember = memberService.signInConfirm(memberVo);
+		
+		if(signInedMember != null)
+			return "sign_in_ok";
+		else
+			return "sign_in_ng";
+		
 	}
 
 }

@@ -40,8 +40,18 @@ public class MemberDao {
 
 		}
 		
-	}
+	} 
 	
+	public MemberVo selectMember(MemberVo memberVo) {
+		System.out.println("[MemberDao] selectMember()");
+		
+		MemberVo signInedMember = memberDB.get(memberVo.getM_id());
+		
+		if(signInedMember != null && memberVo.getM_pw().equals(signInedMember.getM_pw()))
+			return signInedMember;
+		else
+			return null;
+	}
 
 }
 

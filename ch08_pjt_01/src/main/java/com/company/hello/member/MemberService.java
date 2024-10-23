@@ -21,4 +21,12 @@ public class MemberService {
 		
 		return 0;
 	}
+	
+	public MemberVo signInConfirm(MemberVo memberVo) {
+		System.out.println("[MemberService] signInConfirm()");
+		
+		MemberVo signInedMember = memberDao.selectMember(memberVo);
+		
+		return signInedMember;
+	}
 }

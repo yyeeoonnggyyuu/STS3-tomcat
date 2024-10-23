@@ -125,12 +125,15 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		<!-- mysql -->
+
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-   		 <groupId>mysql</groupId>
-   	 		<artifactId>mysql-connector-java</artifactId>
-	    	<version>8.0.31</version> <!-- 적절한 버전 선택 -->
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.31</version>
 		</dependency>
+
 		<!-- Spring security -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>

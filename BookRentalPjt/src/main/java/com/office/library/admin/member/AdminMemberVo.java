@@ -1,5 +1,8 @@
 package com.office.library.admin.member;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AdminMemberVo {
 	
 	int a_m_no;				//관리자 번호
@@ -88,5 +91,7 @@ public class AdminMemberVo {
 		this.a_m_mod_date = a_m_mod_date;
 	}
 
+	
+	
 	
 }

@@ -132,8 +132,13 @@
 			<artifactId>mariadb-java-client</artifactId>
 			<version>3.1.2</version>
 		</dependency>
-
-
+		<!-- Spring security -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

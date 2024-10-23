@@ -32,6 +32,7 @@ public class AdminMemberController {
 		System.out.println("[AdminHomeController] createAccountConfirm()" );
 		
 		String nextPage = "admin/member/create_account_ok";
+		/*여기서 service클래스에서 반환된 result = 1 이면 ok 0 또는 -1 이 반환되면 아래 if문 통해 ng 반환*/
 		
 		int result = adminMemberService.createAccountConfirm(adminMemberVo);
 		
@@ -42,5 +43,30 @@ public class AdminMemberController {
 	}
 	
 	
-
+	@GetMapping("/loginForm")
+	public String loginForm() {
+		System.out.println("[AdminHomeController] loginForm()");
+		
+		String nextPage = "admin/member/login_form";
+		
+		return nextPage;
+	}
+	
+	@PostMapping("/loginConfirm")
+	public String loginConfirm(AdminMemberVo adminMemberVo) {
+		System.out.println("[AdminHomeController] loginConfirm()");
+		
+		String nextPage = "admin/member/login_ok";
+		
+		AdminMemberVo loginedAdminMemberVo =adminMemberService.loginConfirm(adminMemberVo);
+		
+		if(loginedAdminMemberVo == null) {
+			nextPage = "admin/member/login_ng";
+		}
+		
+		return nextPage;
+		
+		
+	}
+	
 }

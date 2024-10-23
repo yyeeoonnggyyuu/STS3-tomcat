@@ -22,11 +22,24 @@ public class AdminMemberService {
 			int result = adminMemberDao.insertAdminAccount(adminMemberVo);
 			
 			if(result >0)
-				return ADMIN_ACCOUNT_CREATE_SUCCESS;
+				return ADMIN_ACCOUNT_CREATE_SUCCESS; /*AdminMemberDao가 반환해준 result =1 을 받으면 이걸 controller에 넘겨줌*/
 			else
 				return ADMIN_ACCOUNT_CREATE_FAIL;
 		} else {
 			return ADMIN_ACCOUNT_ALREADY_EXIST;
 		}
+	}
+	
+	public AdminMemberVo loginConfirm(AdminMemberVo adminMemberVo) {
+		System.out.println("[AdminMemberService] loginConfirm()" );
+		
+		AdminMemberVo loginedAdminMemberVo = adminMemberDao.selectAdmin(adminMemberVo);
+		
+		if(loginedAdminMemberVo != null)
+			System.out.println("[AdminMemberService] ADMIN MEMBER LOGIN SUCCESS!!");
+		else
+			System.out.println("[AdminMemberService] ADMIN MEMBER LOGIN FAIL!!");
+		
+		return loginedAdminMemberVo;
 	}
 }

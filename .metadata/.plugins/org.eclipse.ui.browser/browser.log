@@ -246,3 +246,48 @@
 10월 24, 2024 12:11:11.282     at #x (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17109)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 10월 24, 2024 12:13:49.237 [18792:7380:1024/121349.236:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 10월 24, 2024 12:19:40.649 [18792:7380:1024/121940.648:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+10월 24, 2024 12:41:45.845 NEW SESSION
+10월 24, 2024 12:41:45.845 [496:18536:1024/124145.844:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 24, 2024 12:41:50.464 [496:10200:1024/124150.464:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 12:41:50.725 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 24, 2024 12:42:18.986 [496:10200:1024/124218.986:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 12:43:01.456 [496:10200:1024/124301.456:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 12:44:52.646 [496:10200:1024/124452.646:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 12:48:04.521 [496:10200:1024/124804.520:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 12:54:19.193 [496:10200:1024/125419.192:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:06:30.651 [17728:3700:1024/140630.651:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 24, 2024 14:06:33.195 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 24, 2024 14:06:33.289 [17728:16908:1024/140633.289:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:06:55.824 [17728:16908:1024/140655.824:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:07:50.435 [17728:16908:1024/140750.434:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:09:15.424 [17728:16908:1024/140915.423:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:12:47.491 [17728:16908:1024/141247.490:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:13:12.568 [4340:3316:1024/141312.568:ERROR:content_settings_pref.cc(381)] Invalid pattern strings: http://[*.]www.google,com,*
+10월 24, 2024 14:13:15.155 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 24, 2024 14:13:15.265 [4340:17084:1024/141315.265:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:13:36.881 [4340:17084:1024/141336.880:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:14:33.308 [4340:17084:1024/141433.306:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:16:29.798 [4340:17084:1024/141629.797:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:19:54.503 [4340:17084:1024/141954.503:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:26:34.820 [4340:17084:1024/142634.819:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:36:42.187 [4340:3316:1024/143642.187:ERROR:sharing_service.cc(325)] Device un-registration failed with fatal error
+10월 24, 2024 14:37:17.762 [4340:17084:1024/143717.762:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:37:39.294 [4340:17084:1024/143739.293:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:38:28.494 [4340:17084:1024/143828.494:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:40:07.848 [4340:17084:1024/144007.847:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:41:02.765 [4340:3316:1024/144102.765:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:42:14.694 [4340:3316:1024/144214.694:ERROR:interface_endpoint_client.cc(725)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:42:14.694 [4340:3316:1024/144214.694:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:43:21.105 [4340:3316:1024/144321.105:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:43:49.771 [4340:17084:1024/144349.770:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 14:45:32.783 [4340:3316:1024/144532.783:ERROR:interface_endpoint_client.cc(725)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:50:21.281 [4340:3316:1024/145021.280:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 24, 2024 14:51:18.410 [4340:17084:1024/145118.410:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 16:14:13.32 [4340:3316:1024/161413.031:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch    at new He (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:98356)
+10월 24, 2024 16:14:13.32     at devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:191793
+10월 24, 2024 16:14:13.32     at new oi (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192189)
+10월 24, 2024 16:14:13.32     at oi.instance (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192311)
+10월 24, 2024 16:14:13.32     at O.presentUI (devtools://devtools/bundled/devtools-frontend/front_end/panels/emulation/emulation.js:1:58454)
+10월 24, 2024 16:14:13.32     at #I (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17314)
+10월 24, 2024 16:14:13.33     at #x (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17109)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)

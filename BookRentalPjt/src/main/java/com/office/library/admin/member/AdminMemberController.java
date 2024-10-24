@@ -129,13 +129,13 @@ public class AdminMemberController {
 		return nextPage;
 	}
 	
-	@PostMapping("/modifyAccountconfirm")
-	public String modifyAccountconfirm(AdminMemberVo adminMemberVo, HttpSession session) {
+	@PostMapping("/modifyAccountConfirm")
+	public String modifyAccountConfirm(AdminMemberVo adminMemberVo, HttpSession session) {
 		System.out.println("[AdminHomeController] modifyAccountconfirm()");
 
-		String nextPage = "admin/memeber/modify_account_ok";
+		String nextPage = "admin/member/modify_account_ok";
 
-		int result = adminMemberService.modifyAccountconfirm(adminMemberVo);
+		int result = adminMemberService.modifyAccountConfirm(adminMemberVo);
 		
 		if (result > 0) {
 			AdminMemberVo loginedAdminMemberVo	=
@@ -149,4 +149,29 @@ public class AdminMemberController {
 
 		return nextPage;
 	}
+	
+	@GetMapping("/findPasswordForm")
+	public String findPasswordForm() {
+		System.out.println("[AdminHomeController] findPasswordForm()");
+
+		String nextPage = "admin/member/find_password_form";
+		
+		return nextPage;
+	}
+	
+	@PostMapping("/findPasswordConfirm")
+
+	public String findPasswordConfirm(AdminMemberVo adminMemberVo) {
+		System.out.println("[AdminHomeController] findPasswordConfirm()");
+
+		String nextPage = "admin/member/find_password_ok";
+		
+		int result = adminMemberService.findPasswordConfirm(adminMemberVo);
+		
+		if (result <= 0)
+			nextPage = "admin/member/find_password_ng";
+		
+		return nextPage;
+	}
+		
 }

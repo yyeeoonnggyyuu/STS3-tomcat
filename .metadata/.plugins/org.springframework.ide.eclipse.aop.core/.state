@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="ch07_pjt_01"/>
 <aop-project name="ch08_pjt_01"/>
 <aop-project name="BookRentalPjt"/>
 <aop-project name="ch10_pjt_01"/>

@@ -69,4 +69,21 @@ public class AdminMemberController {
 		
 	}
 	
+	//로그인컨펌 요청  Vo 의 아이디와 비밀번호를 받기때문에 Vo를 파라미터로 받음
+	@PostMapping("/loginConfirm")
+	public String loginConfirm(AdminMemberVo adminMemberVo) {
+		System.out.println("[AdminHomeController] loginConfirm()");
+		
+		String nextPage = "admin/member/login_ok";
+		
+		AdminMemberVo loginedAdminMemberVo = 
+				adminMemberService.loginConfirm(adminMemberVo);
+		
+		if (loginedAdminMemberVo == null) {
+			nextPage = "admin/member/login_ng";
+		}
+		
+		return nextPage;
+	}
+	
 }

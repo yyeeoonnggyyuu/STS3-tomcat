@@ -10,12 +10,13 @@
 <nav>
 	
 	<div id="nav_wrap">
-		
+	
+	<!--리턴받는 것 세션을 설정하였더니 ! 이게 중요 loginedAdminMembervo에서 아이디값을 맞춰줘야함 -->
 		<%
 		AdminMemberVo loginedAdminMemberVo = (AdminMemberVo) session.getAttribute("loginedAdminMemberVo");
 		if (loginedAdminMemberVo != null) {
-		%>
-		
+		%> 
+	
 		<div class="menu">
 			<ul>
 				<li><a href="<c:url value='/admin/member/logoutConfirm' />">로그아웃</a></li>

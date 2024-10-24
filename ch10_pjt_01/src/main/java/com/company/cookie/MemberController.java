@@ -37,7 +37,7 @@ public class MemberController {
 	public String loginConfirm(
 				@RequestParam("m_id") String m_id,
 				@RequestParam("m_pw") String m_pw,
-				HttpServletResponse response) {
+				HttpServletResponse response) {/*리턴시킬 때 쿠키인 response를 같이 보냄*/
 		System.out.println("[MemberController] loginConfirm()");
 		
 
@@ -45,8 +45,8 @@ public class MemberController {
 		
 		if(m_id.equals("user") && m_pw.equals("1234")) {
 			Cookie cookie = new Cookie("loginMember", m_id);
-			cookie.setMaxAge(60 * 30);
-			response.addCookie(cookie);
+			cookie.setMaxAge(60 * 30);/*활용 시칸 60분중 30분 이란 뜻*/
+			response.addCookie(cookie);/*위에서 새로 생성된 객체에서 m_id가 포함된 쿠키를 보냄*/
 		} else {
 			nextPage = "member/login_ng";
 		}
@@ -54,14 +54,14 @@ public class MemberController {
 		
 		return nextPage;
 	}
-	
-	@GetMapping("/logoutForm")
+
+	@GetMapping("/logoutForm")						/*loginMember 밸류 값을 받아옴*/    /*받아온 밸류값을 스트링 loginMember객체에 넣음*/
 	public String logoutForm(@CookieValue(value ="loginMember", required = false) String loginMember, HttpServletResponse response) {
 		System.out.println("[MemberController] logoutForm()");
 		
 		String nextPage = "redirect:/member/";
 		Cookie cookie = new Cookie("loginMember", loginMember);
-		cookie.setMaxAge(0);
+		cookie.setMaxAge(0); /*쿠키 종료*/
 		return nextPage;
 	}
 }

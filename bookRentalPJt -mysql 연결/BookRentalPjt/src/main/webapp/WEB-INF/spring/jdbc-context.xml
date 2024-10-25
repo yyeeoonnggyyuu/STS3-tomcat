@@ -17,7 +17,7 @@
         <property name="url" value="jdbc:mysql://localhost:3306/db_library?useSSL=false&amp;serverTimezone=UTC" />
         <!-- MySQL 사용자 이름 및 비밀번호 -->
         <property name="username" value="root" />
-        <property name="password" value="mysql123" /> <!-- 비밀번호 추가 -->
+        <property name="password" value="mysql123" /> 
     </bean>
 
     <!-- JdbcTemplate 객체 -->

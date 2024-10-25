@@ -88,7 +88,8 @@ public class AdminMemberDao {
 	public AdminMemberVo selectAdmin(AdminMemberVo adminMemberVo) {
 		System.out.println("[AdminMemberDao] selectAdmin()");
 		
-		String sql = "SELECT * FROM tbl_admin_member "+ "WHERE a_m_id = ? AND a_m_approval > 0";
+		String sql = "SELECT * FROM tbl_admin_member "
+					+ "WHERE a_m_id = ? AND a_m_approval > 0";
 		
 		List<AdminMemberVo> adminMemberVos = new ArrayList<AdminMemberVo>();
 		
@@ -124,5 +125,63 @@ public class AdminMemberDao {
 				e.printStackTrace();
 			}
 		return adminMemberVos.size() > 0 ? adminMemberVos.get(0) : null;
+	}
+	
+	
+	//관리자 승인 관련 셀렉문 
+	public List<AdminMemberVo> selectAdmins() {
+		System.out.println("[AdminMemberDao] selectAdmins()");
+		String sql = "SELECT * FROM tbl_admin_member";
+		
+		 List<AdminMemberVo> adminMemberVos = new ArrayList<AdminMemberVo>();
+		 
+		 try {
+				
+				adminMemberVos = jdbcTemplate.query(sql, new RowMapper<AdminMemberVo>(){
+					
+					@Override
+					public AdminMemberVo mapRow(ResultSet rs, int rowNum) throws SQLException{
+						AdminMemberVo adminMemberVo = new AdminMemberVo();
+						
+						adminMemberVo.setA_m_no(rs.getInt("a_m_no"));
+						adminMemberVo.setA_m_approval(rs.getInt("a_m_approval"));
+						adminMemberVo.setA_m_id(rs.getString("a_m_id"));
+						adminMemberVo.setA_m_pw(rs.getString("a_m_pw"));
+						adminMemberVo.setA_m_name(rs.getString("a_m_name"));
+						adminMemberVo.setA_m_gender(rs.getString("a_m_gender"));
+						adminMemberVo.setA_m_part(rs.getString("a_m_part"));
+						adminMemberVo.setA_m_position(rs.getString("a_m_position"));
+						adminMemberVo.setA_m_mail(rs.getString("a_m_mail"));
+						adminMemberVo.setA_m_phone(rs.getString("a_m_phone"));
+						adminMemberVo.setA_m_reg_date(rs.getString("a_m_reg_date"));
+						adminMemberVo.setA_m_mod_date(rs.getString("a_m_mod_date"));
+						
+						return adminMemberVo;
+					}
+				});
+				
+			}catch(Exception e) {
+					e.printStackTrace();
+				}
+		 
+		return adminMemberVos;
+	}
+	
+	//관리자목록 일반관리자 승인
+	public int updateAdminAccount(int a_m_no) {
+		System.out.println("[AdminMemberDao] updateAdminAccount()");
+		
+		String sql = "UPDATE tbl_admin_member SET "
+					+"a_m_approval = 1 "
+					+"WHERE a_m_no = ?";
+		
+		int result = -1;
+		
+		try {
+			result = jdbcTemplate.update(sql, a_m_no);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 }

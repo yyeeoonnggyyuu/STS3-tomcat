@@ -87,7 +87,7 @@
 							<td><%=bookVos.get(i).getB_publish_year()%></td>
 							<td><%=bookVos.get(i).getB_isbn()%></td>
 							<td><%=bookVos.get(i).getB_call_number()%></td>
-							<td><%=bookVos.get(i).getB_rantal_able()%></td>
+							<td><%=bookVos.get(i).getB_rental_able()%></td>
 						</tr>
 						<%
 							}

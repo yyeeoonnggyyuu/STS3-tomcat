@@ -40,7 +40,7 @@ public class BookController {
 		System.out.println("[BookController] registerBookConfirm()");
 		
 		//파일 저장
-		String nextPage = "/admin/book/register_book_ok";
+		String nextPage = "admin/book/register_book_ok";
 		//파일 업로드 기능구현 
 		String savedFilename = uploadFileService.upload(file);
 		
@@ -50,9 +50,9 @@ public class BookController {
 			int result = bookService.registerBookConfirm(bookVo);
 			
 			if(result <= 0)
-				nextPage ="/admin/book/resister_book_ng";
+				nextPage ="admin/book/resister_book_ng";
 		} else {
-			nextPage ="/admin/book/resister_book_ng";
+			nextPage ="admin/book/resister_book_ng";
 		}
 		
 		return nextPage;
@@ -63,7 +63,7 @@ public class BookController {
 	public String searchBookConfirm(BookVo bookVo, Model model) {
 		System.out.println("[UserBookController] searchBookConfirm()");
 		
-		String nextPage = "/admin/book/search_book";
+		String nextPage = "admin/book/search_book";
 		
 		List<BookVo> bookVos = bookService.searchBookConfirm(bookVo);
 		
@@ -77,7 +77,7 @@ public class BookController {
 	public String bookDetail(@RequestParam("b_no") int b_no, Model model) {
 		System.out.println("[BookController] bookDetail()");
 		
-		String nextPage = "/admin/book/book_detail";
+		String nextPage = "admin/book/book_detail";
 		
 		BookVo bookVo = bookService.bookDetail(b_no);
 		
@@ -85,5 +85,53 @@ public class BookController {
 		
 		return nextPage;
 		
+	}
+	
+	//도서정보 수정처리
+	@GetMapping("/modifyBookForm")
+	public String modifyBookForm(@RequestParam("b_no") int b_no, Model model) {
+		System.out.println("[BookController] modifyBookForm()");
+		
+		String nextPage = "admin/book/modify_book_form";
+		
+		BookVo bookVo = bookService.modifyBookForm(b_no);
+		
+		model.addAttribute("bookVo",bookVo);
+		
+		return nextPage;
+	}
+	
+	@PostMapping("/modifyBookConfirm")
+	public String modifyBookConfirm(BookVo bookVo, @RequestParam("file") MultipartFile file) {
+		System.out.println("[BookController] modifyBookConfirm()");
+		
+		String nextPage = "admin/book/register_book_ok";
+		
+		if(!file.getOriginalFilename().equals("")) {
+			String savedFileName = uploadFileService.upload(file);
+			if(savedFileName != null)
+				bookVo.setB_thumbnail(savedFileName);
+		}
+		
+		int result = bookService.modifyBookConfirm(bookVo);
+		
+		if (result <= 0 )
+			nextPage ="admin/book/register_book_ng";
+		
+		return nextPage;
+	}
+	
+	@GetMapping("/deleteBookConfirm")
+	public String deleteBookConfirm(@RequestParam("b_no") int b_no) {
+		System.out.println("[BookController] deleteBookConfirm()");
+		
+		String nextPage="admin/book/delete_book_ok";
+		
+		int result = bookService.deleteBookConfirm(b_no);
+		
+		if(result <= 0)
+			nextPage ="admin/book/delete_book_ng";
+		
+		return nextPage;
 	}
 }

@@ -62,8 +62,8 @@
 								<td>${item.b_call_number}</td>
 								<td>
 								<c:choose>
-									<c:when test="${item.b_rantal_able eq 0}"> <c:out value="대출중" /> </c:when>
-									<c:when test="${item.b_rantal_able eq 1}"> <c:out value="대출가능" /> </c:when>
+									<c:when test="${item.b_rental_able eq 0}"> <c:out value="대출중" /> </c:when>
+									<c:when test="${item.b_rental_able eq 1}"> <c:out value="대출가능" /> </c:when>
 									<c:otherwise> <c:out value="대출중" /> </c:otherwise>
 								</c:choose>
 								</td>
@@ -87,7 +87,7 @@
 							<td><%=bookVos.get(i).getB_publish_year()%></td>
 							<td><%=bookVos.get(i).getB_isbn()%></td>
 							<td><%=bookVos.get(i).getB_call_number()%></td>
-							<td><%=bookVos.get(i).getB_rantal_able()%></td>
+							<td><%=bookVos.get(i).getB_rental_able()%></td>
 						</tr>
 						<%
 							}

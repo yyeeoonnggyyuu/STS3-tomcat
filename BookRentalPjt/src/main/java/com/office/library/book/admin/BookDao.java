@@ -2,6 +2,7 @@ package com.office.library.book.admin;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class BookDao {
 //	복잡한 JDBC 코드 작성을 간소화해줍니다. JdbcTemplate을 사용하면 
 //	SQL 쿼리 실행, 결과 처리, 예외 처리를 쉽게 할 수 있습니다.
 	public boolean isISBN(String b_isbn) {
-		System.out.println("[BookDao] isISBN");
+		System.out.println("[BookDao] isISBN()");
 
 		String sql = "SELECT COUNT(*) FROM tbl_book " + "WHERE b_isbn = ?";
 
@@ -31,7 +32,7 @@ public class BookDao {
 	}
 
 	public int insertBook(BookVo bookVo) {
-		System.out.println("[BookDao] insertBook");
+		System.out.println("[BookDao] insertBook()");
 
 		String sql = "INSERT INTO tbl_book(b_thumbnail, " + "b_name, " + "b_author, " + "b_publisher, "
 				+ "b_publish_year, " + "b_isbn, " + "b_call_number, " + "b_rental_able, " + "b_reg_date, "
@@ -53,7 +54,7 @@ public class BookDao {
 
 	// 도서 검색 기능 Dao 구현
 	public List<BookVo> selectBooksBySearch(BookVo bookVo) {
-		System.out.println("[BookDao] selectBooksBySearch");
+		System.out.println("[BookDao] selectBooksBySearch()");
 
 		String sql = "SELECT * FROM tbl_book " + "WHERE b_name LIKE ? " + "ORDER BY b_no DESC";
 
@@ -90,7 +91,7 @@ public class BookDao {
 
 	//도서 상세보기구현
 	public BookVo selectBook(int b_no) {
-		System.out.println("[BookDao] selectBook");
+		System.out.println("[BookDao] selectBook()");
 
 		String sql = "SELECT * FROM tbl_book " + "WHERE b_no = ? ";
 
@@ -123,5 +124,72 @@ public class BookDao {
 			e.printStackTrace();
 		}
 		return bookVos.size() > 0 ? bookVos.get(0) : null;
+	}
+
+	public int updateBook(BookVo bookVo) {
+		System.out.println("[BookDao] updateBook()");
+		
+		List<String> args = new ArrayList<String>();
+		
+		String sql = "UPDATE tbl_book SET ";
+		
+		if (bookVo.getB_thumbnail() != null) {
+			sql += "b_thumbnail = ?, ";
+			args.add(bookVo.getB_thumbnail());
+		}
+		
+		sql += "b_name = ?, ";
+		args.add(bookVo.getB_name());
+		
+		sql += "b_author = ?, ";
+		args.add(bookVo.getB_author());
+		
+		sql += "b_publisher = ?, ";
+		args.add(bookVo.getB_publisher());
+		
+		sql += "b_publish_year = ?, ";
+		args.add(bookVo.getB_publish_year());
+		
+		sql += "b_isbn = ?, ";
+		args.add(bookVo.getB_isbn());
+		
+		sql += "b_call_number = ?, ";
+		args.add(bookVo.getB_call_number());
+		
+		sql += "b_rental_able = ?, ";
+		args.add(Integer.toString(bookVo.getB_rental_able()));
+		
+		sql += "b_mod_date = NOW() ";
+		
+		sql += "WHERE b_no = ?";
+		args.add(Integer.toString(bookVo.getB_no()));
+		
+		int result = -1;
+		
+		try {
+			result = jdbcTemplate.update(sql, args.toArray());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}
+
+	public int deleteBook(int b_no) {
+		System.out.println("[BookDao] deleteBook()");
+		
+		String sql = "DELETE FROM tbl_book "
+						+"WHERE b_no = ?";
+		
+		int result = -1;
+		
+		try {
+			result = jdbcTemplate.update(sql, b_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return result;
 	}
 }

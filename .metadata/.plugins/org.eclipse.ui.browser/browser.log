@@ -481,3 +481,6 @@
 10월 31, 2024 11:22:23.215 [1488:5936:1031/112223.215:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 10월 31, 2024 11:22:49.248 [1488:5936:1031/112249.248:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 10월 31, 2024 11:23:39.16 [1488:5936:1031/112339.015:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 31, 2024 11:25:19.597 [1488:5936:1031/112519.597:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 31, 2024 11:28:15.71 [1488:5936:1031/112815.070:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 31, 2024 11:36:08.42 [1488:5936:1031/113608.041:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT

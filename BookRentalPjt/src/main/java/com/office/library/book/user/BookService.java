@@ -65,19 +65,20 @@ public class BookService {
 		
 	}
 	
-	//희망 도서 요청 컨폼
+
+	//희망 도서 요청 확인
 	public int requestHopeBookConfirm(HopeBookVo hopeBookVo) {
 		System.out.println("[UserBookBookService] requestHopeBookConfirm()");
 		
 		return bookDao.insertHopeBook(hopeBookVo);
 	}
 
-	//희망 도서 요청 확인
-	public List<HopeBookVo> listupRentalBook(int u_m_no) {
-		System.out.println("[UserBookBookService] listupRentalBook()");
-		
-		return bookDao.selectRequestHopeBooks(u_m_no);
-	}
+//	//희망 도서 요청 확인
+//	public List<HopeBookVo> listupRentalBook(int u_m_no) {
+//		System.out.println("[UserBookBookService] listupRentalBook()");
+//		
+//		return bookDao.selectRequestHopeBooks(u_m_no);
+//	}
 	
 	//희망 도서 요청 목록
 	public List<HopeBookVo> listupRequestHopeBook(int u_m_no) {

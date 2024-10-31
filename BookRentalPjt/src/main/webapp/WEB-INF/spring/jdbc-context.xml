@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
@@ -8,15 +9,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	<!-- <context:property-placeholder location="/WEB-INF/spring/property/real.info.properties" 
 		/> -->
-	<!-- MariaDB connection 객체 -->
+	<!-- MySQL connection 객체 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName"
-			value="org.mariadb.jdbc.Driver" />
-		<property name="url"
-			value="jdbc:mariadb://127.0.0.1:3307/db_library" />
-		<property name="username" value="root" />
-		<property name="password" value="1234" />
+		<!-- 드라이버 클래스 이름 수정 -->
+		<property name="driverClassName" value="#{infoProperty['db.driver']}" /> 
+		<property name="url" value="#{infoProperty['db.url']}" />
+		<property name="username" value="#{infoProperty['db.username']}" />
+		<property name="password" value="#{infoProperty['db.password']}" />
 	</bean>
 	<!-- JdbcTemplate 객체 -->
 	<bean id="jdbcTemplate"

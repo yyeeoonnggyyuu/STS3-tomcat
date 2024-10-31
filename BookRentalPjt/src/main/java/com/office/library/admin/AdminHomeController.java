@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/admin")
 public class AdminHomeController {
 	
-	@RequestMapping(value = {"","/"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
 	public String home() {
-		System.out.println("[AdminHomeController] home()" );
+		System.out.println("[AdminHomeController] home()");
 		
-		String nextPage = "admin/home";
+		String nextPage ="admin/home";
 		
 		return nextPage;
 	}
-
+	
+	
 }

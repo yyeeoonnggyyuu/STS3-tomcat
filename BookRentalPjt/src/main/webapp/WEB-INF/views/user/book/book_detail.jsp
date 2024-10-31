@@ -64,8 +64,8 @@
 								<td>대출가능</td>
 								<td>
 								<c:choose>
-									<c:when test="${bookVo.b_rantal_able eq '0'}"> <c:out value="X" /> </c:when>
-									<c:when test="${bookVo.b_rantal_able eq '1'}"> <c:out value="O" /> </c:when>
+									<c:when test="${bookVo.b_rental_able eq '0'}"> <c:out value="X" /> </c:when>
+									<c:when test="${bookVo.b_rental_able eq '1'}"> <c:out value="O" /> </c:when>
 									<c:otherwise> <c:out value="X" /> </c:otherwise>
 								</c:choose>
 								</td>
@@ -87,10 +87,10 @@
 			<div class="buttons">
 				
 				<c:choose>
-					<c:when test="${bookVo.b_rantal_able eq 0}">
+					<c:when test="${bookVo.b_rental_able eq 0}">
 						<a href="#none">대출중</a>
 					</c:when>
-					<c:when test="${bookVo.b_rantal_able eq 1}">
+					<c:when test="${bookVo.b_rental_able eq 1}">
 						<c:url value='/book/user/rentalBookConfirm' var='rental_url'>
 							<c:param name='b_no' value='${bookVo.b_no}'/>
 						</c:url>

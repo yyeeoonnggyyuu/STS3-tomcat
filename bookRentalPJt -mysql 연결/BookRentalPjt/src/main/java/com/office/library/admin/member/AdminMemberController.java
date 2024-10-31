@@ -144,10 +144,38 @@ public class AdminMemberController {
 		
 		if(result >0) {
 			AdminMemberVo loginedAdminMemberVo = adminMemberService.getLoginedAdminMemberVo(adminMemberVo.getA_m_no());
+		
+			session.setAttribute("loginedAdminMemberVo", loginedAdminMemberVo);
+			session.setMaxInactiveInterval(60 * 30);
 		} else {
 			nextPage = "admin/memeber/modify_account_ng";
 		}
 		return nextPage;
 		
 	}
+	
+	//비밀번호찾기 폼
+	@GetMapping("/findPasswordForm")
+	public String findPasswordForm() {
+		System.out.println("[AdminHomeController] findPasswordForm()");
+		
+		String nextPage ="admin/member/find_password_form";
+		
+		return nextPage;
+	}
+	
+	@PostMapping("/findPasswordConfirm")
+	public String findPasswordConfirm(AdminMemberVo adminMemberVo) {
+		System.out.println("[AdminHomeController] findPasswordConfirm()");
+		
+		String nextPage= "admin/member/find_password_ok";
+		
+		int result = AdminMemberService.findPasswordConfirm(adminMemberVo);
+		
+		if(result <= 0)
+			nextPage = "admin/memeber/find_password_ng";
+		return nextPage;
+		
+	}
+	
 }

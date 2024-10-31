@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserHomeController {
 	
-	@GetMapping({"", "/"})
+	@GetMapping({"","/"})
 	public String home() {
-		System.out.println("[UserHomeController] home()");
+		System.out.println("[librayUserHomeController] home()");
 		
-		String nextPage = "user/home";
+		String nextPage ="user/home";
 		
 		return nextPage;
 	}

@@ -60,8 +60,8 @@
 								<td>${item.b_call_number}</td>
 								<td>
 								<c:choose>
-									<c:when test="${item.b_rantal_able eq '0'}"> <c:out value="X" /> </c:when>
-									<c:when test="${item.b_rantal_able eq '1'}"> <c:out value="O" /> </c:when>
+									<c:when test="${item.b_rental_able eq '0'}"> <c:out value="X" /> </c:when>
+									<c:when test="${item.b_rental_able eq '1'}"> <c:out value="O" /> </c:when>
 									<c:otherwise> <c:out value="X" /> </c:otherwise>
 								</c:choose>
 								</td>
